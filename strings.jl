@@ -49,21 +49,39 @@ println("That'll be \$99999, please")
 
 
 # Data Containers --------------------------------------------------
+# indexing
+egl = "abdcxz"
+egl[1]
+egl[7] # erro
+
+"Make a string, please"[10:14]
+
+greetings = "Hello, world"; greetings[2:8]
+
+init,last = 1, 3; myrange = init:last; "someotherstring"[myrange]
+
+greetings[3:2:9]
+
+greetings[9:-3:3]
+
+greetings[end:-1:1]
+
+# difference between `length` and `ncodeunits`
+
+length(egl)
+ncodeunits(egl)
+
+eg2 = "αβ"
+length(eg2)
+ncodeunits(eg2)
+
+eg2[1:3]
 
 
+# Compreension [<value> for <dummyvar> in <container>]
+greetingsarray = [char for char in greetings]
 
-
-
-
-
-
-
-
-
-
-
-
-
+greetingsarray = [char^3 for char in greetings]
 
 
 
