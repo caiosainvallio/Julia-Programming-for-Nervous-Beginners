@@ -23,6 +23,7 @@ X = 45
 'a'
 'a' + 1
 
+
 # Scape Sequences --------------------------------------------------
 "\$"
 
@@ -30,6 +31,38 @@ x = "He said \"Hello, world\""; println(x)
 x = "Hello, \nworld"; println(x)
 
 doggerel = "Errors are red, \nSome things are blue, \nI love coding \nAnd so should you"; println(doggerel)
+
+# String Interpolation --------------------------------------------------
+"zxywvut"
+
+"zxy$("Help!")wvut"
+
+trackedvariable = "one"; "the value of trackedvariable is $(trackedvariable)"
+
+trackedvariable = "seventh-one"; "the value of trackedvariable is $(trackedvariable)"
+
+trackedvariable = "seventh-one"; "the value of trackedvariable is $trackedvariable"
+
+trackedvariable, n = "seventh-one", '1'; "the value of trackedvariable is $(n+73)"
+
+println("That'll be \$99999, please")
+
+
+# Data Containers --------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
