@@ -1,4 +1,4 @@
-# Read & Manipulate text -------------------------------------------------------------------
+# Read & filter text -------------------------------------------------------------------
 # removing the punctuation
 fh = open("julia_for_beginners/prideandprejudiceextract.txt")
 pridelines = readlines(fh)
@@ -15,7 +15,7 @@ join(filter!(x -> !(x==',' || x=='.'|| x=='”'), samplechars))
 # first filter
 depunclines = []
 for line in pridelines
-    newline = join(filter!(x -> !(x=='.' || x==',' || x=='”' || x=='”'), [x for x in line]))
+    newline = join(filter!(x -> !(x=='.' || x==',' || x=='“' || x=='”'), [x for x in line]))
     push!(depunclines, newline)
 end
 depunclines
@@ -62,3 +62,24 @@ for wordnumber in 1:numwords-1
     end
 end
 count
+
+
+# Manipulate text -------------------------------------------------------------------
+newwords1 = pridewords
+for i in 1:length(pridewords)
+    if pridewords[i] == "Bennet"
+        newwords1[i] = "Klunderclap"
+    end
+end
+println(join(newwords1, ' '))
+
+
+# use rand 
+numwords2 = 200; newwords2 = pridewords[1:numwords2]
+for i in 1:numwords2
+    if rand([true, false])  # like coin toss
+        newwords2[i] = "Klunderclap"
+    end
+end
+println(join(newwords2, ' '))
+
